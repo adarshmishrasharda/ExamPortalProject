@@ -1,0 +1,64 @@
+<div class="bootstrap-wrapper">
+	<div class="container">
+        <div class="row mt20" >
+          
+
+            <div class="col-md-6 offset-md-3">
+
+                <mat-card>
+                <div class="container text-center">
+
+                    <img src='../../../assets/logo.png' alt="nothing" style="height: 120px; width: 120px;"/>
+                    
+                   
+                </div>
+                <!-- {{user | json}} -->
+                <h1 class="text-center">Login Here</h1>
+                {{loginData | json}}
+
+                <form class="ml10 mr10 " (ngSubmit)="formSubmit()">
+
+                   
+                    <!-- username  -->
+                    <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Username</mat-label>
+                          <input
+                          required
+                          [(ngModel)]="loginData.username"
+                          name="username"
+                          type="text" matInput placeholder="Enter here">
+                          <mat-hint>Valid Username </mat-hint>
+
+                        </mat-form-field>
+                      </p>
+
+                       <!-- password  -->
+                       <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Password</mat-label>
+                          <input
+                          required
+                          [(ngModel)]="loginData.password"
+                          name="password"
+                          type="password" matInput placeholder="Enter here">
+                          <mat-hint>Your Password</mat-hint>
+
+                        </mat-form-field>
+                      </p>
+                    
+                    <div class="container text-center mb10">
+
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button style="margin-left: 20px;" mat-raised-button color="accent">Clear</button>
+
+                    </div>
+
+                </form>
+            </mat-card>
+            </div>
+        </div>
+		
+
+	</div>
+</div>

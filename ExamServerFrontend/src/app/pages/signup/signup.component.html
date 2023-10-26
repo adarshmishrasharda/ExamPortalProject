@@ -1,0 +1,123 @@
+
+
+<div class="bootstrap-wrapper">
+	<div class="container">
+        <div class="row mt20" >
+          
+
+            <div class="col-md-6 offset-md-3">
+
+              <mat-card>
+                <div class="container text-center">
+
+                    <img src='../../../assets/logo.png' alt="nothing" style="height: 120px; width: 120px;"/>
+                    
+                   
+                </div>
+                {{user | json}}
+                <h1 class="text-center">Register Here</h1>
+
+                <form class="ml10 mr10" (ngSubmit)="formSubmit()">
+
+                   
+                    <!-- username  -->
+                    <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Username</mat-label>
+                          <input
+                          required
+                          [(ngModel)]="user.username"
+                          name="username"
+                          type="text" matInput placeholder="Enter here">
+                          <mat-hint>Username must be Unique</mat-hint>
+
+                        </mat-form-field>
+                      </p>
+
+                       <!-- password  -->
+                       <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Password</mat-label>
+                          <input
+                          required
+                          [(ngModel)]="user.password"
+                          name="password"
+                          type="password" matInput placeholder="Enter here">
+                          <mat-hint>Password must be Strong Recommended</mat-hint>
+
+                        </mat-form-field>
+                      </p>
+                      <!-- First Name -->
+                      <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>First Name</mat-label>
+                          <input 
+                          required
+                          [(ngModel)]="user.firstName"
+                          name="firstName"
+                          type="text" matInput placeholder="Enter here">
+
+                        </mat-form-field>
+                      </p>
+                      <!-- last name -->
+                      <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Last Name</mat-label>
+                          <input 
+                          required
+                          [(ngModel)]="user.lastName"
+                          name="lastName"
+                          type="text" matInput placeholder="Enter here">
+                          
+                        </mat-form-field>
+                      </p>
+
+                       <!-- email  -->
+                       <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Email</mat-label>
+                          <input
+                          required
+                          [(ngModel)]="user.email"
+                          name="email"
+                          type="email" matInput placeholder="Enter here">
+                          
+                        </mat-form-field>
+                      </p>
+
+
+                       <!-- phone  -->
+                       <p>
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Phone Number</mat-label>
+                          <input 
+                          required
+                          [(ngModel)]="user.phone"
+                          name="phone"
+                          type="number" matInput placeholder="Enter here">
+                          <mat-hint>Please Enter Number Only</mat-hint>
+                        </mat-form-field>
+                      </p>
+
+                    <div class="container text-center mb10">
+
+                        <button type="submit" mat-raised-button color="primary">Register</button>
+                        <button class="ml10" mat-raised-button color="accent">Clear</button>
+
+
+
+                    </div>
+
+
+
+                </form>
+              </mat-card>
+
+            </div>
+        </div>
+		
+
+
+		
+	</div>
+</div>
